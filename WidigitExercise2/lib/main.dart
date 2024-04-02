@@ -96,6 +96,43 @@ class MyApp extends StatelessWidget {
                       ],
                     )
                   ],
+                )),
+            SizedBox(
+              height: 25,
+            ),
+            Positioned(
+                left: 0,
+                bottom: 10,
+                child: Container(
+                  padding: EdgeInsets.all(10),
+                  color: Colors.white,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [Text("SubTotal"), Text("\$50.00")],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [Text("TAX(10.%)"), Text("\$6.00")],
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Checkout",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStatePropertyAll(Colors.red)),
+                      )
+                    ],
+                  ),
                 ))
           ],
         ),
