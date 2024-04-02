@@ -132,7 +132,11 @@ class ReusableCard extends StatelessWidget {
               ],
             ),
             Column(
-              children: [Icon(Icons.add), Text("2.0"), Icon(Icons.minimize)],
+              children: [
+                Icon(Icons.add_circle),
+                Text("2.0"),
+                Icon(Icons.minimize)
+              ],
             )
           ],
         ));
