@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
             SizedBox(
               height: 25,
             ),
-            Container(
+            Card(
                 color: Colors.white,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -75,7 +75,7 @@ class MyApp extends StatelessWidget {
             SizedBox(
               height: 25,
             ),
-            Container(
+            Card(
                 color: Colors.white,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -103,7 +103,7 @@ class MyApp extends StatelessWidget {
             Positioned(
                 left: 0,
                 bottom: 10,
-                child: Container(
+                child: Card(
                   padding: EdgeInsets.all(10),
                   color: Colors.white,
                   child: Column(
