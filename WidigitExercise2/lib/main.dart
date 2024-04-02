@@ -53,53 +53,11 @@ class MyApp extends StatelessWidget {
                 SizedBox(
                   height: 25,
                 ),
-                Card(
-                    color: Colors.white,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          width: 100,
-                          height: 100,
-                          child: Image.asset("assets/image1.jpg"),
-                        ),
-                        Column(
-                          children: [Text("Caloose"), Text("\$100.00")],
-                        ),
-                        Column(
-                          children: [
-                            Icon(Icons.add),
-                            Text("2.0"),
-                            Icon(Icons.minimize)
-                          ],
-                        )
-                      ],
-                    )),
+                ReusableCard(),
                 SizedBox(
                   height: 25,
                 ),
-                Card(
-                    color: Colors.white,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          width: 100,
-                          height: 100,
-                          child: Image.asset("assets/image1.jpg"),
-                        ),
-                        Column(
-                          children: [Text("Caloose"), Text("\$100.00")],
-                        ),
-                        Column(
-                          children: [
-                            Icon(Icons.add),
-                            Text("2.0"),
-                            Icon(Icons.minimize)
-                          ],
-                        )
-                      ],
-                    )),
+                ReusableCard()
               ],
             ),
             SizedBox(
@@ -143,5 +101,40 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class ReusableCard extends StatelessWidget {
+  const ReusableCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+        color: Colors.white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 100,
+                  height: 100,
+                  child: Image.asset("assets/image1.jpg"),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Column(
+                  children: [Text("Caloose"), Text("\$100.00")],
+                ),
+              ],
+            ),
+            Column(
+              children: [Icon(Icons.add), Text("2.0"), Icon(Icons.minimize)],
+            )
+          ],
+        ));
   }
 }
