@@ -1,12 +1,9 @@
-import 'package:bmi_calculator/calculator_functionality.dart';
-import 'package:bmi_calculator/icon_containt.dart';
-import 'package:bmi_calculator/result_page.dart';
-import 'package:bmi_calculator/reusable_card.dart';
-import 'package:bmi_calculator/reusable_content.dart';
+import 'constant.dart';
+import 'icon_containt.dart';
+import "reusable_card.dart";
+import 'reusable_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:bmi_calculator/constant.dart';
 
 TextStyle labelStyle = TextStyle(fontSize: 18, color: Color(0xFF8D8E98));
 
@@ -47,22 +44,6 @@ class _InputPageState extends State<InputPage> {
               : inActiveColor
           : inActiveColor;
     });
-
-    // if (gender == 1) {
-    //   femaleColor = inActiveColor;
-    //   if (maleColor == activeColor) {
-    //     maleColor = inActiveColor;
-    //   } else {
-    //     maleColor = activeColor;
-    //   }
-    // } else {
-    //   maleColor = inActiveColor;
-    //   if (femaleColor == activeColor) {
-    //     femaleColor = inActiveColor;
-    //   } else {
-    //     femaleColor = activeColor;
-    //   }
-    // }
   }
 
   @override
@@ -85,7 +66,7 @@ class _InputPageState extends State<InputPage> {
                       },
                       colour: maleColor,
                       cardChild: CardChild(
-                        iconName: FontAwesomeIcons.mars,
+                        iconName: Icons.mail,
                         text: "Male",
                       ),
                     ),
@@ -97,7 +78,7 @@ class _InputPageState extends State<InputPage> {
                       },
                       colour: femaleColor,
                       cardChild: CardChild(
-                        iconName: FontAwesomeIcons.venus,
+                        iconName: Icons.female,
                         text: "Female",
                       ),
                     ),
@@ -174,20 +155,7 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
             GestureDetector(
-              onTap: () {
-                print("clicked");
-                CalculatorBrain calc = CalculatorBrain(
-                  height: sliderValue,
-                  weight: weight,
-                );
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return ResultPage(
-                    bmiResult: calc.calculateBMI(),
-                    result: calc.getResult(),
-                    interpretation: calc.getInterpretation(),
-                  );
-                }));
-              },
+              onTap: () {},
               child: Container(
                   margin: EdgeInsets.only(top: 5.0),
                   width: double.infinity,

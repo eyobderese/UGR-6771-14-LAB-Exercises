@@ -1,4 +1,4 @@
-import 'package:bmi_calculator/constant.dart';
+import 'package:flutter_application_1/constant.dart';
 import 'package:flutter/material.dart';
 
 class CardContaint extends StatelessWidget {
