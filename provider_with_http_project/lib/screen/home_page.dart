@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => TodoDetailPage(
-                                    todo: provider.todos[index],
+                                    id: provider.todos[index].id,
                                   )));
                     },
                   );

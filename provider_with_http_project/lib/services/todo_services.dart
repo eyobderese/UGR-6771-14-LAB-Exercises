@@ -16,4 +16,15 @@ class TodoServices {
       return [];
     }
   }
+
+  Future<Todo> getSingle(id) async {
+    final response = await http
+        .get(Uri.parse('https://jsonplaceholder.typicode.com/todos/$id'));
+    if (response.statusCode == 200) {
+      Todo todo = Todo.fromJson(json.decode(response.body));
+      return todo;
+    } else {
+      return Todo.fromJson({});
+    }
+  }
 }
