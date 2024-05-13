@@ -6,9 +6,9 @@ fun calculate(num1: Double, num2: Double, operation: String): Double {
         "-" -> num1 - num2
         "*" -> num1 * num2
         "/" -> num1 / num2
-        else -> throw IllegalArgumentException("Invalid operation")
     }
 }
+
 
 
 // Exercise 2: Variables
